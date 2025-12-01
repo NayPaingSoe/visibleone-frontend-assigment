@@ -250,7 +250,7 @@ body {
 .hero-inner {
   position: relative;
   z-index: 1;
-  padding: 120px 0 80px;
+  padding: 100px 0 60px;
   text-align: center;
 }
 .hero-card {
@@ -259,19 +259,20 @@ body {
   background: #121318;
   /* border: 1px solid var(--border); */
   /* border-radius: 16px; */
-  padding: 32px 28px;
+  padding: 40px 32px;
   /* box-shadow: var(--shadow); */
 }
 .hero-title {
-  font-size: clamp(18px, 6vw, 30px);
-  line-height: 1.1;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.2;
   margin: 0 0 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .hero-sub {
-  color: white;
+  color: var(--muted);
   margin: 0 auto 28px auto;
-  width: 400px;
+  max-width: 480px;
+  line-height: 1.6;
 }
 .hero-actions {
   display: flex;
@@ -308,7 +309,7 @@ body {
 }
 .section-head h2 {
   margin: 0;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400;
   padding-right: 20px;
 }
@@ -355,7 +356,7 @@ body {
 }
 .timeline .content h3 {
   margin: 0 0 4px;
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
   font-weight: 500;
@@ -447,29 +448,35 @@ body {
   background: var(--surface);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 3fr 5fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  padding: 40px 60px 40px 60px;
+  padding: 60px;
   margin-bottom: 20px;
+  border-radius: 12px;
+  gap: 60px;
 }
 .project-card .preview {
   aspect-ratio: 1/1;
+  width: 100%;
 }
 .gradient {
   background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
 }
 
 .project-card .meta {
-  padding: 50px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  justify-content: center;
+  gap: 12px;
+  justify-content: flex-start;
   align-items: flex-start;
-  text-align: right;
+  text-align: left;
 }
 .meta h3 {
   color: white;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
 }
 .project-card .icon {
   color: var(--muted);
@@ -502,7 +509,7 @@ body {
 .testimonial {
   background: var(--surface);
   border-radius: 20px;
-  padding: 32px;
+  padding: 36px 32px;
   position: relative;
 
   border: 2px solid transparent;
@@ -540,7 +547,7 @@ body {
 }
 .client-info .name {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 2px;
 }
@@ -552,6 +559,7 @@ body {
   font-size: 48px;
   font-weight: bold;
   background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 18px;
@@ -561,8 +569,8 @@ body {
 .testimonial p {
   margin: 0 0 14px;
   color: white;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   font-weight: 500;
 }
 
@@ -595,7 +603,7 @@ body {
 }
 .cta h2 {
   margin: 0;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400;
   padding-right: 20px;
 }
