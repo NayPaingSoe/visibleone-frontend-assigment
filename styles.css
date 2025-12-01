@@ -287,7 +287,8 @@ body {
 .section-head h2 {
   margin: 0;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 400;
+  padding-right: 20px;
 }
 .spark {
   color: var(--accent-b);
@@ -418,15 +419,16 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
+  padding-top: 20px;
 }
 .project-card {
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 5fr;
   align-items: center;
+  padding: 40px 60px 40px 60px;
+  margin-bottom: 20px;
 }
 .project-card .preview {
   aspect-ratio: 1/1;
@@ -434,15 +436,33 @@ body {
 .gradient {
   background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
 }
+
 .project-card .meta {
-  padding: 24px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: center;
+  align-items: flex-start;
+  text-align: right;
+}
+.meta h3 {
+  color: white;
 }
 .project-card .icon {
   color: var(--muted);
+}
+.project-card .project-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid white;
+  z-index: 1;
+  padding: 4px;
 }
 .project-card h3 {
   margin: 0;
