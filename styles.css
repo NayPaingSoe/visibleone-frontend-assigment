@@ -546,23 +546,42 @@ body {
 
 .contact-inner {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: center;
+  padding: 40px 0;
+}
+.cta {
+  padding: 40px;
 }
 .cta-grid {
-  height: 240px;
+  height: 100%;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: linear-gradient(#191a20 1px, transparent 1px) 0 0/100% 40px,
     linear-gradient(90deg, #191a20 1px, transparent 1px) 0 0/40px 100%;
+  position: relative;
+  overflow: hidden;
+}
+.sparkle-grid {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L12.2451 7.75486L20 10L12.2451 12.2451L10 20L7.75486 12.2451L0 10L7.75486 7.75486L10 0Z' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E")
+    repeat;
+  background-size: 20px 20px;
+  opacity: 0.5;
 }
 .cta h2 {
-  margin: 0 0 8px;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  padding-right: 20px;
 }
 .cta p {
   margin: 0 0 18px;
   color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .reveal {
@@ -579,7 +598,107 @@ body {
   position: relative;
   z-index: 1;
 }
-
+.footer {
+  background: var(--bg);
+  padding: 32px 0 24px;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer-logo svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.footer-brand {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.footer-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(32, 33, 36, 0.9);
+  border-radius: 24px;
+  border: 2px solid transparent;
+  background-image: linear-gradient(var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 0 8px;
+  height: 48px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.footer-social-btn {
+  padding: 0 16px;
+  height: 32px;
+  width: auto;
+  border-radius: 16px;
+  background: #202124;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.footer-social-btn:hover {
+  background: none;
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-hire-btn {
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 24px;
+  padding: 0 22px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+.footer-user-btn {
+  background: linear-gradient(90deg, var(--accent-b), var(--accent-a));
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+.footer-user-btn svg {
+  width: 20px;
+  height: 20px;
+}
 @media (max-width: 920px) {
   .projects-grid {
     grid-template-columns: 1fr;
@@ -589,6 +708,15 @@ body {
   }
   .contact-inner {
     grid-template-columns: 1fr;
+  }
+  .cta-grid {
+    min-height: 200px; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 600px) {
+  .cta {
+    padding: 20px;
   }
 }
 
