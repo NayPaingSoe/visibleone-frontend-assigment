@@ -15,7 +15,7 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#hero" class="brand">airhe</a>
+        <a href="#hero" class="brand"><span class="brand-mark"></span>znisa</a>
         <nav class="nav" aria-label="Primary">
           <button
             class="nav-toggle"
@@ -26,6 +26,12 @@
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
           </button>
+          <div class="nav-pill">
+            <span class="pill-icon" aria-hidden="true">◌</span>
+            <a href="#hero" class="pill-link">About</a>
+            <a href="#projects" class="pill-link">Projects</a>
+            <a href="#contact" class="pill-link">Contact me</a>
+          </div>
           <ul id="primary-nav" class="nav-list">
             <li><a href="#hero" class="nav-link">Home</a></li>
             <li><a href="#process" class="nav-link">Workflow</a></li>
@@ -33,7 +39,10 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
-        <a href="#contact" class="btn btn-primary">Hire Me</a>
+        <div class="header-cta">
+          <a href="#contact" class="btn btn-primary">Hire me</a>
+          <a href="#" class="icon-circle" aria-label="Profile"></a>
+        </div>
       </div>
     </header>
 
@@ -41,10 +50,15 @@
       <section id="hero" class="hero">
         <div class="grid-bg"></div>
         <div class="container hero-inner">
-          <h1 class="hero-title">I design and build clean websites</h1>
-          <p class="hero-sub">Simple, fast and carefully crafted for growth</p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">See Work</a>
+          <div class="hero-card">
+            <h1 class="hero-title">I design and build clean websites</h1>
+            <p class="hero-sub">
+              Write anything here something about yourself to showcase what
+              actually you doing or targeting etc.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Hire me</a>
+            </div>
           </div>
         </div>
       </section>
