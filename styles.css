@@ -3,7 +3,7 @@
   --surface: #121318;
   --muted: #8b8d93;
   --text: #e9eaee;
-  --border: #23242b;
+  --border: #38393d;
   --accent-a: #f1c3a6;
   --accent-b: #8ea2ff;
   --shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
@@ -167,10 +167,16 @@ body {
 }
 .btn-ghost {
   color: var(--text);
-  background: #121318;
-  border: 1px solid #2f3140;
+  background: var(--bg);
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04),
     0 10px 20px rgba(0, 0, 0, 0.35);
+  border-radius: 30px;
+  margin-top: 12px;
 }
 .btn-primary:hover {
   filter: brightness(1.05);
@@ -276,7 +282,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .section-head h2 {
   margin: 0;
@@ -288,38 +294,62 @@ body {
 }
 
 .timeline {
-  border-left: 1px dashed var(--border);
+  position: relative;
   margin-left: 18px;
   display: grid;
-  gap: 48px;
+  gap: 32px;
 }
 .timeline-item {
+  position: relative;
   display: grid;
-  grid-template-columns: 18px 1fr;
-  gap: 24px;
+  grid-template-columns: 28px 1fr;
+  gap: 20px;
   align-items: start;
 }
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 40px;
+  width: 1px;
+  height: calc(100% - 28px);
+  background: var(--border);
+}
 .step {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   color: var(--text);
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid white;
+  z-index: 1;
+  padding: 4px;
+}
+.content {
+  padding-bottom: 30px;
 }
 .timeline .content h3 {
-  margin: 0 0 20px;
-  font-size: 16px;
+  margin: 0 0 4px;
+  font-size: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  color: white;
+}
+.timeline .content p {
+  margin: 0 0 8px;
+  color: var(--text);
+  width: 700px;
 }
 .timeline .content .icon {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .timeline .content .icon .gradient {
   width: 100%;
@@ -331,9 +361,57 @@ body {
   -webkit-mask: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 0C8.05888 0 0 8.05888 0 18C0 27.9411 8.05888 36 18 36C27.9411 36 36 27.9411 36 18C36 8.05888 27.9411 0 18 0ZM18 3.6C26.0118 3.6 32.4 9.98816 32.4 18C32.4 26.0118 26.0118 32.4 18 32.4C9.98816 32.4 3.6 26.0118 3.6 18C3.6 9.98816 9.98816 3.6 18 3.6ZM18 10.8C13.934 10.8 10.8 13.934 10.8 18C10.8 22.066 13.934 25.2 18 25.2C22.066 25.2 25.2 22.066 25.2 18C25.2 13.934 22.066 10.8 18 10.8Z' fill='white'/%3E%3C/svg%3E")
     center / contain no-repeat;
 }
-.timeline .content p {
-  margin: 0 0 10px;
-  color: var(--muted);
+.pacman {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.pacman::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: var(--bg);
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+}
+.pacman::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: var(--bg);
+  transform-origin: top left;
+  transform: rotate(-45deg);
+}
+
+.timeline-item:nth-child(1) .pacman::before {
+  transform: rotate(45deg);
+}
+.timeline-item:nth-child(1) .pacman::after {
+  transform: rotate(-45deg);
+}
+
+.timeline-item:nth-child(2) .pacman::before {
+  transform: rotate(135deg);
+}
+.timeline-item:nth-child(2) .pacman::after {
+  transform: rotate(45deg);
+}
+
+.timeline-item:nth-child(3) .pacman::before {
+  transform: rotate(225deg);
+}
+.timeline-item:nth-child(3) .pacman::after {
+  transform: rotate(120deg);
 }
 
 .projects-grid {
@@ -490,17 +568,4 @@ body {
   .nav {
     justify-content: center;
   }
-}
-.pacman {
-  width: 220px;
-  height: 220px;
-  background: linear-gradient(135deg, #d8b79a, #8a93e6);
-  border-radius: 50%;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    50% 50%,
-    /* ← EXACT CENTER */ 100% 100%,
-    0% 100%
-  );
 }
