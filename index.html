@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand">airhe</a>
+        <nav class="nav" aria-label="Primary">
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+          <ul id="primary-nav" class="nav-list">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#process" class="nav-link">Workflow</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="grid-bg"></div>
+        <div class="container hero-inner">
+          <h1 class="hero-title">I design and build clean websites</h1>
+          <p class="hero-sub">Simple, fast and carefully crafted for growth</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">See Work</a>
+          </div>
+        </div>
+      </section>
+
+      <nav class="section-nav">
+        <div class="container section-nav-inner">
+          <a href="#hero" class="section-link">home</a>
+          <a href="#process" class="section-link">workflow</a>
+          <a href="#projects" class="section-link">projects</a>
+          <a href="#contact" class="section-link">contact</a>
+        </div>
+      </nav>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>My process to design</h2>
+            <span class="spark">✦</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="step">1</div>
+              <div class="content">
+                <h3>Product design framework</h3>
+                <p>
+                  Discover goals, research and thorough planning to deliver
+                  results.
+                </p>
+                <a class="btn btn-ghost" href="#">Read more</a>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="step">2</div>
+              <div class="content">
+                <h3>Design and build</h3>
+                <p>Design in Figma and build with clean, scalable code.</p>
+                <a class="btn btn-ghost" href="#">Read more</a>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="step">3</div>
+              <div class="content">
+                <h3>Launch and iterate</h3>
+                <p>
+                  Ship fast, measure and iterate for continuous improvement.
+                </p>
+                <a class="btn btn-ghost" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Some Featured projects</h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="preview gradient"></div>
+              <div class="meta">
+                <span class="icon">✦</span>
+                <h3>Project Name</h3>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="preview gradient"></div>
+              <div class="meta">
+                <span class="icon">✦</span>
+                <h3>Project Name</h3>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="preview gradient"></div>
+              <div class="meta">
+                <span class="icon">✦</span>
+                <h3>Project Name</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Client testimonials</h2>
+          </div>
+          <div class="testimonials">
+            <div class="testimonial reveal">
+              <p>Great work and attention to detail.</p>
+              <div class="author">
+                <span class="name">Jane Smith</span>
+                <span class="role">Product Lead</span>
+              </div>
+            </div>
+            <div class="testimonial reveal">
+              <p>Clear communication and timely delivery.</p>
+              <div class="author">
+                <span class="name">Robert Chen</span>
+                <span class="role">Founder</span>
+              </div>
+            </div>
+            <div class="testimonial reveal">
+              <p>Elegant design and solid engineering.</p>
+              <div class="author">
+                <span class="name">Ava Lopez</span>
+                <span class="role">Design Director</span>
+              </div>
+            </div>
+            <div class="testimonial reveal">
+              <p>Improved performance and user satisfaction.</p>
+              <div class="author">
+                <span class="name">Omar Ali</span>
+                <span class="role">CTO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-inner">
+          <div class="cta">
+            <h2>Have idea about project?</h2>
+            <p>Let’s collaborate and build something meaningful.</p>
+            <a href="mailto:hello@example.com" class="btn btn-primary"
+              >Get in touch</a
+            >
+          </div>
+          <div class="cta-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
