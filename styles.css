@@ -7,8 +7,8 @@
   --accent-a: #f1c3a6;
   --accent-b: #8ea2ff;
   --shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-  --grid-dot: rgba(150, 150, 160, 0.18);
-  --grid-line: #9093a5;
+  --grid-dot: rgba(200, 200, 210, 0.28);
+  --grid-line: #454a58;
 }
 
 * {
@@ -186,19 +186,15 @@ body {
   inset: 0;
   background: radial-gradient(
         circle at 12% 28%,
-        rgba(255, 255, 255, 0.12) 1px,
+        var(--grid-dot) 1px,
         transparent 1px
       )
       0 0/120px 120px,
-    radial-gradient(
-        circle at 75% 60%,
-        rgba(255, 255, 255, 0.12) 1px,
-        transparent 1px
-      )
-      0 0/140px 140px,
-    linear-gradient(#191a20 1px, transparent 1px) 0 0/100% 40px,
-    linear-gradient(90deg, #191a20 1px, transparent 1px) 0 0/40px 100%;
-  opacity: 0.6;
+    radial-gradient(circle at 75% 60%, var(--grid-dot) 1px, transparent 1px) 0 0/140px
+      140px,
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/100% 40px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0/40px 100%;
+  opacity: 0.75;
   pointer-events: none;
 }
 .grid-bg::before,
