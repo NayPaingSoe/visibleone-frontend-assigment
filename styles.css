@@ -253,7 +253,7 @@ body {
   top: 0;
   bottom: 0;
   background: 
-    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/100% 70px,
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/100% 61px,
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0/140px 100%;
   opacity: 0.75;
   pointer-events: none;
@@ -278,10 +278,26 @@ body {
   right: 16px;
   top: 100px;
 }
+.hero-sparkle-left {
+  position: absolute;
+  left: 136px;
+  top: 347px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+}
+.hero-sparkle-right {
+  position: absolute;
+  right: 125px;
+  top: 90px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+}
 .hero-inner {
   position: relative;
   z-index: 1;
-  padding: 100px 0 60px;
+  padding: 100px 0 121px;
   text-align: center;
 }
 .hero-card {
