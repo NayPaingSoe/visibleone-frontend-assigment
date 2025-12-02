@@ -258,26 +258,6 @@ body {
   opacity: 0.75;
   pointer-events: none;
 }
-.grid-bg::before,
-.grid-bg::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #fff;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
-}
-.grid-bg::before {
-  left: -6px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-.grid-bg::after {
-  right: 16px;
-  top: 100px;
-}
 .hero-sparkle-left {
   position: absolute;
   left: 136px;
