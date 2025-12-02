@@ -26,6 +26,7 @@ body {
     Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 60px 0 60px;
 }
 
 .container {
@@ -34,12 +35,12 @@ body {
 }
 
 .site-header {
+  padding: 25px ;
   position: sticky;
   top: 0;
   z-index: 50;
   background: rgba(12, 13, 16, 0.8);
   backdrop-filter: saturate(140%) blur(8px);
-  border-bottom: 1px solid var(--border);
 }
 .header-inner {
   display: grid;
@@ -116,9 +117,21 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent-b), var(--accent-a));
+  background-image: linear-gradient(135deg, var(--accent-b), var(--accent-a)),
+    linear-gradient(135deg, var(--accent-a), var(--accent-b));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-size: 200% 100%;
+  border: 2px solid transparent;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.icon-circle:hover {
+  transform: translateY(-2px) rotate(10deg) scale(1.1);
+  background-position: 100% 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(142, 162, 255, 0.4);
 }
 .nav-pill {
   display: none;
@@ -181,10 +194,18 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 .btn-primary {
   color: #0c0d10;
-  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  background-image: linear-gradient(90deg, var(--accent-a), var(--accent-b)),
+    linear-gradient(90deg, var(--accent-b), var(--accent-a));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-size: 200% 100%;
+  border: 2px solid transparent;
   box-shadow: var(--shadow);
 }
 .btn-ghost {
@@ -201,10 +222,23 @@ body {
   margin-top: 12px;
 }
 .btn-primary:hover {
-  filter: brightness(1.05);
+  transform: translateY(-2px) scale(1.02);
+  background-position: 100% 0;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55),
+              0 0 30px rgba(241, 195, 166, 0.3),
+              0 0 15px rgba(142, 162, 255, 0.3);
+}
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
 }
 .btn-ghost:hover {
   background: #1b1c24;
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+              0 15px 30px rgba(0, 0, 0, 0.45);
+}
+.btn-ghost:active {
+  transform: translateY(0);
 }
 
 .hero {
@@ -698,20 +732,35 @@ body {
   gap: 10px;
 }
 .footer-hire-btn {
-  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  background-image: linear-gradient(90deg, var(--accent-a), var(--accent-b)),
+    linear-gradient(90deg, var(--accent-b), var(--accent-a));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-size: 200% 100%;
+  border: 2px solid transparent;
   color: #222;
   font-weight: 600;
   font-size: 1rem;
-  border: none;
   border-radius: 24px;
   padding: 0 22px;
   height: 40px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-hire-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-position: 100% 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(241, 195, 166, 0.25),
+              0 0 10px rgba(142, 162, 255, 0.25);
+}
+.footer-hire-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 .footer-user-btn {
   background: linear-gradient(90deg, var(--accent-b), var(--accent-a));
+  background-size: 200% 100%;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -721,7 +770,17 @@ body {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-user-btn:hover {
+  transform: translateY(-2px) scale(1.05) rotate(5deg);
+  background-position: 100% 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(142, 162, 255, 0.25),
+              0 0 10px rgba(241, 195, 166, 0.25);
+}
+.footer-user-btn:active {
+  transform: translateY(0) scale(0.95) rotate(0deg);
 }
 .footer-user-btn svg {
   width: 20px;
