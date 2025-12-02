@@ -89,20 +89,23 @@ body {
 
 .nav-toggle {
   display: none;
-  width: 42px;
-  height: 36px;
-  border: 1px solid var(--border);
+  width: 40px;
+  height: 40px;
+  border: 1px solid #2a2b32;
   background: #121318;
-  border-radius: 9px;
+  border-radius: 12px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
+  cursor: pointer;
 }
 .nav-toggle-bar {
-  width: 18px;
+  width: 14px;
   height: 2px;
-  background: var(--text);
+  background: #e9eaee;
   display: block;
+  border-radius: 2px;
 }
 .header-cta {
   display: flex;
