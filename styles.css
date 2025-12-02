@@ -520,16 +520,22 @@ body {
   color: var(--muted);
 }
 .project-card .project-number {
-  width: 28px;
-  height: 28px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   color: var(--text);
-  background: transparent;
-  border: 2px solid white;
+  font-size: 24px;
+  font-weight: 600;
+  background-image: linear-gradient(#121318, #121318),
+    linear-gradient(135deg, var(--accent-b), var(--accent-a));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-size: 200% 100%;
+  border: 1px solid transparent;
   z-index: 1;
-  padding: 4px;
+  box-shadow: 0 0 20px rgba(142, 162, 255, 0.15);
 }
 .project-card h3 {
   margin: 0;
