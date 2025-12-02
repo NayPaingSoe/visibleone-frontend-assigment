@@ -551,20 +551,12 @@ body {
   gap: 18px;
 }
 .testimonial {
-  background: var(--surface);
+  background: linear-gradient(#121318, #121318) padding-box,
+              linear-gradient(135deg, var(--accent-a), var(--accent-b), transparent 60%) border-box;
+  border: 1px solid transparent;
   border-radius: 20px;
   padding: 36px 32px;
   position: relative;
-
-  border: 2px solid transparent;
-  border-image: linear-gradient(
-      187deg,
-      transparent,
-      var(--accent-a),
-      var(--accent-b),
-      transparent
-    )
-    1;
 }
 .testimonial::before {
   content: "";
